@@ -1,0 +1,56 @@
+[
+  {
+    "firstName": "Li",
+    "lastName": "Hua",
+    "email": "lihua@example.com",
+    "dateOfBirth": "2000-01-15",
+       "address": {
+      "street": "No. 10 Xingfu Road",
+      "city": "Beijing",
+      "state": "Beijing",
+      "zipCode": "100000"
+    },
+    "userPreferences": {
+      "theme": "dark",
+      "language": "zh-CN",
+      "notifications": true,
+       "subscription": true
+    }
+  },
+  {
+    "firstName": "Zhang",
+    "lastName": "San",
+    "email": "zhangsan@example.com",
+    "dateOfBirth": "1999-05-22",
+     "address": {
+      "street": "No. 30 Guangzhou Road",
+      "city": "Guangzhou",
+      "state": "Guangdong",
+      "zipCode": "510000"
+    },
+    "userPreferences": {
+      "theme": "light",
+      "language": "en-US",
+      "notifications": false,
+      "subscription": true
+    }
+  },
+  {
+    "firstName": "Li",
+    "lastName": "Bai",
+    "email": "libai@example.com",
+    "dateOfBirth": "2001-09-30",
+    "address": {
+      "street": "No. 5 Qingdao Road",
+      "city": "Shanghai",
+      "state": "Shanghai",
+      "zipCode": "200000"
+    },
+    "userPreferences": {
+      "theme": "dark",
+      "language": "zh-CN",
+      "notifications": true,
+      "subscription": false
+    }
+  }
+]

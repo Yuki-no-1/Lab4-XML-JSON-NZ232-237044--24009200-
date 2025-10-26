@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>XML Book Catalog Display</title>
+  <style>
+    .book-item { margin: 15px 0; padding: 10px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h1>Book Catalog</h1>
+  <div id="bookContainer"></div>
+<script>
+    fetch('book.xml')
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to fetch XML file');
+        return response.text(); // Read XML as text format
+      })
+      .then(xmlText => {
+        // Parse XML text
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        // Get all book elements
+        const books = xmlDoc.getElementsByTagName('book');
+        const container = document.getElementById('bookContainer');
+        for (let i = 0; i < books.length; i++) {
+          const book = books[i];
+          const id = book.getAttribute('id');
+          const title = book.getElementsByTagName('title')[0].textContent;
+          const author = book.getElementsByTagName('author')[0].textContent;
+          const price = book.getElementsByTagName('price')[0].textContent;
+          const bookDiv = document.createElement('div');
+          bookDiv.className = 'book-item';
+          bookDiv.innerHTML = `
+            <p><strong>Book ID: </strong>${id}</p>
+            <p><strong>Title: </strong>${title}</p>
+            <p><strong>Author: </strong>${author}</p>
+            <p><strong>Price: </strong>¥${price}</p>
+          `;
+          container.appendChild(bookDiv);
+        }
+      })
+      .catch(err => console.error('Error: ', err.message));
+  </script>
+</body>
+</html>
