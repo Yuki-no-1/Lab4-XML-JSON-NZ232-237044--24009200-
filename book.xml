@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bookCatalogue>
   <book id="1">
-    <title>PythonDesign</title>
+    <title>YouthNews</title>
     <author>Max</author>
     <price>89.00</price>
   </book>
   <book id="2">
-    <title>JavaScript</title>
+    <title>Grimm'sFairyTales</title>
     <author>Jack</author>
     <price>129.00</price>
   </book>
   <book id="3">
-    <title>XmlDesign</title>
+    <title>AdvancedMathematics</title>
     <author>Mike</author>
     <price>45.00</price>
   </book>
+
 </bookCatalogue>
